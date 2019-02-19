@@ -2,14 +2,14 @@ int led = 3;
 int cds = A0;
 
 void setup() {
-  Serial.begin(9600); //추가
+  Serial.begin(9600); 
   pinMode(led, OUTPUT); 
 }
 
 void loop() {
   int light = analogRead(cds); 
-  Serial.println(light); //추가
-  delay(500); //추가
+  Serial.println(light); 
+  delay(500); 
 
   if (light < 600) {
     digitalWrite(led, HIGH);
